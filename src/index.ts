@@ -1,9 +1,17 @@
-function component() {
-  const element = document.createElement("div");
+import Quill from "quill";
+import "quill/dist/quill.snow.css";
 
-  element.innerHTML = "<h1>Hello World</h1>";
+import "./styles.css";
 
-  return element;
+const options = {
+  debug: "info",
+  modules: {
+    toolbar: "#toolbar",
+  },
+  theme: "snow",
+};
+
+const container = document.getElementById("editor");
+if (container) {
+  const editor = new Quill(container, options);
 }
-
-document.body.appendChild(component());
