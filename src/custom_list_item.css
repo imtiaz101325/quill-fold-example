@@ -5,13 +5,47 @@
 
 .custom_list_item:after {
   position: absolute;
-  content: ">";
-  top: 0;
+  content: "v";
   cursor: pointer;
-  margin-left: -1.5em;
-  margin-right: 0.3em;
-  text-align: right;
   pointer-events: all;
+  top: 0;
+  left: 0;
+}
+
+.custom_list_item.toggle:after {
+  content: ">";
+}
+
+.custom_list_item.ql-indent-1:after {
+  left: 3em;
+}
+
+.custom_list_item.ql-indent-2:after {
+  left: 6em;
+}
+
+.custom_list_item.ql-indent-3:after {
+  left: 9em;
+}
+
+.custom_list_item.ql-indent-4:after {
+  left: 12em;
+}
+
+.custom_list_item.ql-indent-5:after {
+  left: 15em;
+}
+
+.custom_list_item.ql-indent-6:after {
+  left: 18em;
+}
+
+.custom_list_item.ql-indent-7:after {
+  left: 21em;
+}
+
+.custom_list_item.ql-indent-8:after {
+  left: 24em;
 }
 
 .custom_list_item.hide {

@@ -7,6 +7,12 @@ const ListItem = Quill.import("formats/list/item");
 const eventHandler = (event: MouseEvent) => {
   const element = <HTMLDListElement>event.target;
 
+  if (element.classList.contains("toggle")) {
+    element.classList.remove("toggle");
+  } else {
+    element.classList.add("toggle");
+  }
+
   if (element) {
     let indentLevel = 0;
     element.classList.forEach((className) => {
