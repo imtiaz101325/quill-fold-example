@@ -21,6 +21,7 @@ module.exports = {
             <title>Quill Example</title>
           </head>
           <body>
+            <h1>Quill Example</h1>
             <div id="toolbar"></div>
             <div id="editor"></div>
           </body>
