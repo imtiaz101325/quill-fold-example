@@ -1,6 +1,8 @@
 import Quill from "quill";
-import "quill/dist/quill.snow.css";
 
+import CustomListItem from "./CustomListItem";
+
+import "quill/dist/quill.snow.css";
 import "./styles.css";
 
 const toolbarOptions = [
@@ -32,5 +34,7 @@ const options = {
 
 const container = document.getElementById("editor");
 if (container) {
+  Quill.register(CustomListItem, true);
+
   const editor = new Quill(container, options);
 }

@@ -1,0 +1,19 @@
+.custom_list_item {
+  position: relative;
+  pointer-events: none;
+}
+
+.custom_list_item:after {
+  position: absolute;
+  content: ">";
+  top: 0;
+  cursor: pointer;
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
+  pointer-events: all;
+}
+
+.custom_list_item.hide {
+  display: none;
+}
