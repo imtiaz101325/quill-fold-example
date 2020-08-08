@@ -16,6 +16,10 @@
   content: ">";
 }
 
+.custom_list_item.toggle::before {
+  content: "\2295" ;
+}
+
 .custom_list_item.ql-indent-1:after {
   left: 3em;
 }

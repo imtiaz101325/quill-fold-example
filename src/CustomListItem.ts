@@ -14,6 +14,7 @@ const eventHandler = (event: MouseEvent) => {
   }
 
   if (element) {
+    console.log(element)
     let indentLevel = 0;
     element.classList.forEach((className) => {
       const parts = className.split("-");
@@ -33,7 +34,7 @@ const eventHandler = (event: MouseEvent) => {
           }
         });
 
-        if (indentLevel === siblingIndentLevel) {
+        if (siblingIndentLevel <= indentLevel) {
           break;
         }
 
@@ -50,6 +51,7 @@ const eventHandler = (event: MouseEvent) => {
     }
   }
 };
+
 export default class Custom extends ListItem {
   static create(value: string): Node {
     const node = super.create();
