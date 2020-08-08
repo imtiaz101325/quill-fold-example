@@ -7,14 +7,15 @@ const ListItem = Quill.import("formats/list/item");
 const eventHandler = (event: MouseEvent) => {
   const element = <HTMLDListElement>event.target;
 
+  let mode = "HIDE";
   if (element.classList.contains("toggle")) {
+    mode = "SHOW";
     element.classList.remove("toggle");
   } else {
     element.classList.add("toggle");
   }
 
   if (element) {
-    console.log(element)
     let indentLevel = 0;
     element.classList.forEach((className) => {
       const parts = className.split("-");
@@ -38,7 +39,7 @@ const eventHandler = (event: MouseEvent) => {
           break;
         }
 
-        if (sibling.classList.contains("hide")) {
+        if (mode === "SHOW") {
           sibling.classList.remove("hide");
         } else {
           sibling.classList.add("hide");
